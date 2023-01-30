@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     if (starNumber ==  1) {
       card_review_user.innerHTML += `
-        <div class="h-80 swiper-slide flex justify-evenly py-8 rounded-lg border border-zinc-300 shadow-lg">
+        <div id="card_review" class="swiper-slide flex justify-evenly py-8 rounded-lg border border-zinc-300 shadow-lg">
           <div class="flex flex-col w-[90%] gap-2">
             <div class="flex gap-4 items-center justify-between mb-3">
               <h2 class="text-2xl font-medium text-blue-600">${doc.data().name}</h2>
@@ -98,13 +98,15 @@ document.addEventListener('DOMContentLoaded', async () => {
 
               <svg viewBox="0 0 24 24" class="w-6 h-6" astro-icon="ic:round-star"><path fill="currentColor" d="m12 17.27 4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72 3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"></path></svg>
             </div>
-            <p>${doc.data().description}</p>
+            <div>
+              <p id="description-reviews">${doc.data().description}</p>
+            </div>
           </div>
         </div>
       `
     } else if (starNumber ==  2) {
       card_review_user.innerHTML += `
-        <div class="h-80 swiper-slide flex justify-evenly py-8 rounded-lg border border-zinc-300 shadow-lg">
+        <div id="card_review" class="swiper-slide flex justify-evenly py-8 rounded-lg border border-zinc-300 shadow-lg">
           <div class="flex flex-col w-[90%] gap-4">
             <div class="flex gap-4 items-center justify-between mb-3">
               <h2 class="text-2xl font-medium text-blue-600">${doc.data().name}</h2>
@@ -121,13 +123,15 @@ document.addEventListener('DOMContentLoaded', async () => {
 
               <svg viewBox="0 0 24 24" class="w-6 h-6" astro-icon="ic:round-star"><path fill="currentColor" d="m12 17.27 4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72 3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"></path></svg>
             </div>
-            <p class="text-lg">${doc.data().description}</p>
+            <div>
+              <p id="description-reviews">${doc.data().description}</p>
+            </div>
           </div>
         </div>
       `
     } else if (starNumber ==  3) {
       card_review_user.innerHTML += `
-        <div class="h-80 swiper-slide flex justify-evenly py-8 rounded-lg border border-zinc-300 shadow-lg">
+        <div id="card_review" class="swiper-slide flex justify-evenly py-8 rounded-lg border border-zinc-300 shadow-lg">
           <div class="flex flex-col w-[90%] gap-2">
             <div class="flex gap-4 items-center justify-between mb-3">
               <h2 class="text-2xl font-medium text-blue-600">${doc.data().name}</h2>
@@ -144,13 +148,15 @@ document.addEventListener('DOMContentLoaded', async () => {
 
               <svg viewBox="0 0 24 24" class="w-6 h-6" astro-icon="ic:round-star"><path fill="currentColor" d="m12 17.27 4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72 3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"></path></svg>
             </div>
-            <p>${doc.data().description}</p>
+            <div>
+              <p id="description-reviews">${doc.data().description}</p>
+            </div>
           </div>
         </div>
       `
     } else if (starNumber ==  4) {
       card_review_user.innerHTML += `
-        <div class="h-80 swiper-slide flex justify-evenly py-8 rounded-lg border border-zinc-300 shadow-lg">
+        <div id="card_review" class="swiper-slide flex justify-evenly py-8 rounded-lg border border-zinc-300 shadow-lg">
           <div class="flex flex-col w-[90%] gap-2">
             <div class="flex gap-4 items-center justify-between mb-3">
               <h2 class="text-2xl font-medium text-blue-600">${doc.data().name}</h2>
@@ -167,13 +173,15 @@ document.addEventListener('DOMContentLoaded', async () => {
 
               <svg viewBox="0 0 24 24" class="w-6 h-6" astro-icon="ic:round-star"><path fill="currentColor" d="m12 17.27 4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72 3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"></path></svg>
             </div>
-            <p>${doc.data().description}</p>
+            <div>
+              <p id="description-reviews">${doc.data().description}</p>
+            </div>
           </div>
         </div>
       `
     } else if (starNumber ==  5) {
       card_review_user.innerHTML += `
-        <div class="h-80 swiper-slide flex justify-evenly py-8 rounded-lg border border-zinc-300 shadow-lg">
+        <div id="card_review" class="swiper-slide flex justify-evenly py-8 rounded-lg border border-zinc-300 shadow-lg">
           <div class="flex flex-col w-[90%] gap-2">
             <div class="flex gap-4 items-center justify-between mb-3">
               <h2 class="text-2xl font-medium text-blue-600">${doc.data().name}</h2>
@@ -190,7 +198,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
               <svg viewBox="0 0 24 24" class="w-6 h-6 text-blue-600" astro-icon="ic:round-star"><path fill="currentColor" d="m12 17.27 4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72 3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"></path></svg>
             </div>
-            <p>${doc.data().description}</p>
+            <div>
+              <p id="description-reviews">${doc.data().description}</p>
+            </div>
           </div>
         </div>
       `
