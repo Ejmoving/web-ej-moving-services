@@ -3,13 +3,13 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-
 import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCUpS9hdrJIsO8Yq5e1A24QFOFQKXqtqjY",
-  authDomain: "ej-moving-services.firebaseapp.com",
-  projectId: "ej-moving-services",
-  storageBucket: "ej-moving-services.appspot.com",
-  messagingSenderId: "755457285584",
-  appId: "1:755457285584:web:4ee7fd9b68376e0bb0edd5",
-  measurementId: "G-MHYS8HPP0T"
+  apiKey: "AIzaSyD4DPJiCZ4zYb6cT-5PTlNVZe967AhWASY",
+  authDomain: "web-ej-moving-services.firebaseapp.com",
+  projectId: "web-ej-moving-services",
+  storageBucket: "web-ej-moving-services.appspot.com",
+  messagingSenderId: "558622413041",
+  appId: "1:558622413041:web:bc6870370344d5d60ad950",
+  measurementId: "G-5K2GVXTL3R"
 };
 
 // Initialize Firebase
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     if (starNumber ==  1) {
       card_review_user.innerHTML += `
-        <div class="swiper-slide flex justify-evenly py-8 rounded-lg border border-zinc-300 shadow-lg">
+        <div class="h-80 swiper-slide flex justify-evenly py-8 rounded-lg border border-zinc-300 shadow-lg">
           <div class="flex flex-col w-[90%] gap-2">
             <div class="flex gap-4 items-center justify-between mb-3">
               <h2 class="text-2xl font-medium text-blue-600">${doc.data().name}</h2>
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       `
     } else if (starNumber ==  2) {
       card_review_user.innerHTML += `
-        <div class="swiper-slide flex justify-evenly py-8 rounded-lg border border-zinc-300 shadow-lg">
+        <div class="h-80 swiper-slide flex justify-evenly py-8 rounded-lg border border-zinc-300 shadow-lg">
           <div class="flex flex-col w-[90%] gap-4">
             <div class="flex gap-4 items-center justify-between mb-3">
               <h2 class="text-2xl font-medium text-blue-600">${doc.data().name}</h2>
@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       `
     } else if (starNumber ==  3) {
       card_review_user.innerHTML += `
-        <div class="swiper-slide flex justify-evenly py-8 rounded-lg border border-zinc-300 shadow-lg">
+        <div class="h-80 swiper-slide flex justify-evenly py-8 rounded-lg border border-zinc-300 shadow-lg">
           <div class="flex flex-col w-[90%] gap-2">
             <div class="flex gap-4 items-center justify-between mb-3">
               <h2 class="text-2xl font-medium text-blue-600">${doc.data().name}</h2>
@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       `
     } else if (starNumber ==  4) {
       card_review_user.innerHTML += `
-        <div class="swiper-slide flex justify-evenly py-8 rounded-lg border border-zinc-300 shadow-lg">
+        <div class="h-80 swiper-slide flex justify-evenly py-8 rounded-lg border border-zinc-300 shadow-lg">
           <div class="flex flex-col w-[90%] gap-2">
             <div class="flex gap-4 items-center justify-between mb-3">
               <h2 class="text-2xl font-medium text-blue-600">${doc.data().name}</h2>
@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       `
     } else if (starNumber ==  5) {
       card_review_user.innerHTML += `
-        <div class="swiper-slide flex justify-evenly py-8 rounded-lg border border-zinc-300 shadow-lg">
+        <div class="h-80 swiper-slide flex justify-evenly py-8 rounded-lg border border-zinc-300 shadow-lg">
           <div class="flex flex-col w-[90%] gap-2">
             <div class="flex gap-4 items-center justify-between mb-3">
               <h2 class="text-2xl font-medium text-blue-600">${doc.data().name}</h2>
