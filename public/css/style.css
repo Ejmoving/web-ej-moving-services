@@ -4,11 +4,16 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-#description-reviews {
+#container-description-reviews {
     overflow: auto;
+}
+
+#description-reviews {
+    overflow-y: auto;
     padding-bottom: 1rem;
 }
 
 #card_review {
     height: 15rem;
 }
+
