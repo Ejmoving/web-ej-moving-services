@@ -1,0 +1,15 @@
+---
+export interface Props {
+	text_btn: string;
+}
+
+const { text_btn } = Astro.props;
+---
+
+<button class="relative inline-block mt-8 px-5 py-2 text-white text-lg overflow-hidden transition-all font-semibold bg-blue-600 rounded-md shadow-lg shadow-blue-300 hover:bg-gradient-to-r from-orange-400 to-orange-600 hover:scale-110">
+    <span class="absolute block top-0 -left-full w-full h-[2px] bg-gradient-to-r from-transparent to-white animate-btn_anim1"></span>
+    <span class="absolute block -top-full right-0 w-[2px] h-full bg-gradient-to-b from-transparent to-white animate-btn_anim2" style="animation-delay: .3s;"></span>
+    <span class="absolute block bottom-0 -right-full w-full h-[2px] bg-gradient-to-l from-transparent to-white animate-btn_anim3" style="animation-delay: .6s;"></span>
+    <span class="absolute block -bottom-full left-0 w-[2px] h-full bg-gradient-to-t from-transparent to-white animate-btn_anim4" style="animation-delay: .9s;"></span>
+    <p>{text_btn}</p>
+</button>

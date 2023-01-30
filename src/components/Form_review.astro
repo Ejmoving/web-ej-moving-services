@@ -1,0 +1,126 @@
+---
+import { Icon } from 'astro-icon';
+---
+
+<style>
+  .star-rating {
+    direction: rtl;
+    display: inline-block;
+    cursor: default;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  label {
+    color: #bbb;
+    font-size: 2rem;
+    padding: 0;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+  label:hover,
+  label:hover ~ label,
+  input[type="radio"]:checked ~ label {
+    color: #f2b600;
+  }
+
+</style>
+
+<div id="modal_review" class="hidden">
+    <div class="p-5 fixed inset-0 grid place-items-center z-30">
+        <div class="bg-white/70 px-5 py-8 rounded-md text-center relative w-full max-w-xl overflow-hidden border border-zinc-400 shadow-lg backdrop-blur-lg">
+
+          <Icon id="btn_close_review" class="z-40 w-6 h-6 absolute text-black top-3 right-3 cursor-pointer" name="mdi:window-close" />
+
+          <form id="form_review">
+
+            <h2 class="text-center text-2xl mb-6 text-blue-700 font-semibold">What do you think? <br> help us to improve</h2>
+
+            <div class="-mx-3 flex flex-wrap">
+
+              <div class="w-full px-3 sm:w-1/2">
+                <div class="mb-5">
+                  <label for="from_name" class="mb-3 block text-base font-medium text-[#07074D]">
+                    Full Name
+                  </label>
+                  <input type="text" name="from_name" id="formName" placeholder="Full Name" class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-blue-700 focus:shadow-md" />
+                </div>
+              </div>
+        
+              <div class="w-full px-3 sm:w-1/2">
+                <div>
+                  <label for="email" class="mb-3 block text-base font-medium text-[#07074D]">
+                    Email
+                  </label>
+                  <input
+                    type="text"
+                    name="email"
+                    id="formEmail"
+                    placeholder="Email"
+                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-blue-700 focus:shadow-md"
+                  />
+                </div>
+              </div>
+
+            </div>
+
+            <div class="-mx-3 flex flex-wrap ">
+
+                <div class="w-full px-3 sm:w-full">
+                  <div class="mb-5">
+                    <div class="my-5 flex justify-center gap-4">
+                      <div class="star-rating">
+                        <input id="star-5" type="radio" name="rating" value="5" />
+                        <label for="star-5" title="5 stars">
+                          <Icon class="w-10 h-10 inline" name="ic:round-star-rate" />
+                        </label>
+                        <input id="star-4" type="radio" name="rating" value="4" />
+                        <label for="star-4" title="4 stars">
+                          <Icon class="w-10 h-10 inline" name="ic:round-star-rate" />
+                        </label>
+                        <input id="star-3" type="radio" name="rating" value="3" />
+                        <label for="star-3" title="3 stars">
+                          <Icon class="w-10 h-10 inline" name="ic:round-star-rate" />
+                        </label>
+                        <input id="star-2" type="radio" name="rating" value="2" />
+                        <label for="star-2" title="2 stars">
+                          <Icon class="w-10 h-10 inline" name="ic:round-star-rate" />
+                        </label>
+                        <input id="star-1" type="radio" name="rating" value="1" />
+                        <label for="star-1" title="1 star">
+                          <Icon class="w-10 h-10 inline" name="ic:round-star-rate" />
+                        </label>
+                      </div>
+                    </div> 
+                  </div>
+                </div>
+            </div>
+
+            <div class="-mx-3 flex flex-wrap ">
+              <div class="w-full">
+                <div>
+                  <div class="mt-2">
+                    <textarea id="formDescription" class="bg-white w-[90%] resize-none h-48 border border-zinc-300 p-2" cols="30" rows="10"></textarea>
+                  </div> 
+                </div>
+              </div>
+            </div>
+
+            <div id="btn_send_review">
+              <button type="submit" class="relative inline-block mt-8 px-5 py-2 text-white text-lg overflow-hidden transition-all font-semibold bg-blue-600 rounded-md shadow-lg shadow-blue-300 hover:bg-gradient-to-r from-orange-400 to-orange-600 hover:scale-110">
+                <span class="absolute block top-0 -left-full w-full h-[2px] bg-gradient-to-r from-transparent to-white animate-btn_anim1"></span>
+                <span class="absolute block -top-full right-0 w-[2px] h-full bg-gradient-to-b from-transparent to-white animate-btn_anim2" style="animation-delay: .3s;"></span>
+                <span class="absolute block bottom-0 -right-full w-full h-[2px] bg-gradient-to-l from-transparent to-white animate-btn_anim3" style="animation-delay: .6s;"></span>
+                <span class="absolute block -bottom-full left-0 w-[2px] h-full bg-gradient-to-t from-transparent to-white animate-btn_anim4" style="animation-delay: .9s;"></span>
+                <p>Send</p>
+              </button>
+            </div>
+          
+          </form>
+        </div>
+    </div>
+</div>

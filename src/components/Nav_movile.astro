@@ -1,0 +1,40 @@
+---
+import { Icon } from 'astro-icon';
+---
+
+<div id="navMovile" class="hidden absolute">
+    <div class="z-20 flex shrink-0 grow-0 justify-around gap-4 border border-gray-200 bg-white/50 p-2.5 shadow-lg backdrop-blur-lg fixed top-28 right-3 min-h-[auto] min-w-[64px] flex-col rounded-lg">
+        <a href="#" class="flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-1 rounded-md p-1.5 text-gray-400 hover:bg-blue-600 hover:text-white">
+    
+            <Icon class="w-6 h-6 shrink-0" name="ic:baseline-home" />
+    
+            <small class="text-center text-xs font-medium"> Home </small>
+        </a>
+    
+        <a
+            href="#about"
+            class="flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-1 rounded-md p-1.5 text-gray-400 hover:bg-blue-600 hover:text-white"
+        >
+            <Icon class="w-6 h-6 shrink-0" name="mdi:account-question" />
+    
+            <small class="text-center text-xs font-medium"> About us </small>
+        </a>
+    
+        <a
+            href="#types_moving"
+            class="flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-1 rounded-md p-1.5 text-gray-400 hover:bg-blue-600 hover:text-white"
+        >
+    
+            <small class="text-center text-xs font-medium"> Types of Moving Services </small>
+        </a>
+
+        <a
+            href="#reviews"
+            class="flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-1 rounded-md p-1.5 text-gray-400 hover:bg-blue-600 hover:text-white"
+        >
+            <Icon class="w-6 h-6 shrink-0" name="mdi:comment-account-outline" />
+            <small class="text-center text-xs font-medium"> Reviews </small>
+        </a>
+    
+    </div>
+</div>

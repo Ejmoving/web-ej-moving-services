@@ -1,0 +1,54 @@
+---
+import NavMovile from './Nav_movile.astro';
+import Logo from '/logo-EJ.png';
+import { Icon } from 'astro-icon';
+---
+
+<div class="fixed w-full z-20">
+  <div class="bg-zinc-800 grid place-items-center py-2 text-white font-semibold">
+    <a href="tel:+1571302-2504"> <Icon class="h-5 w-5 inline" name="ic:round-call" />+1 (571) 302-2504</a>
+  </div>
+
+  <div class="px-6 py-4 lg:px-12 bg-white shadow-2xl">
+    <div>
+      <nav class="flex h-9 items-center justify-between" aria-label="Global">
+        <div class="flex lg:min-w-0 lg:flex-1" aria-label="Global">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">EJ Moving Llc</span>
+            <img class="h-14" src={Logo} alt="ej moving llc">
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button id="btn-navMovile" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+            <span class="sr-only">Open main menu</span>
+            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:min-w-0 lg:justify-center lg:gap-x-12">
+          <a href="#" class="font-semibold text-gray-900  transition-all hover:text-blue-700 hover:scale-110 hover:border-b-blue-700">Home</a>
+          <a href="#about" class="font-semibold text-gray-900 transition-all hover:text-blue-700 hover:scale-110 hover:border-b-blue-700">About us</a>
+          <a href="#types_moving" class="font-semibold text-gray-900 transition-all hover:text-blue-700 hover:scale-110 hover:border-b-blue-700">Types of Moving Services</a>
+          <a href="#reviews" class="font-semibold text-gray-900 transition-all hover:text-blue-700 hover:scale-110 hover:border-b-blue-700">Reviews</a>
+        </div>
+        <div class="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
+          <a href="#quote" class="transition-all inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 hover:scale-110 ring-gray-900/10 hover:ring-gray-900/20 hover:bg-zinc-600 hover:text-white">Free quote</a>
+        </div>
+
+        <NavMovile />
+
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+
+  document.getElementById('btn-navMovile').addEventListener('click', function() {
+    document.getElementById('navMovile').classList.toggle('hidden');
+  })
+
+</script>

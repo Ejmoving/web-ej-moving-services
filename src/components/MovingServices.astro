@@ -1,0 +1,18 @@
+---
+import Card from "./Card.astro";
+import imgLocal from "/img_local.jpg"
+import imgLongDistance from "/img_long-distance.jpg"
+import imgInternalMove from "/img_internal-move.jpg"
+---
+
+<section id="types_moving" class="pt-32">
+    <h2 class="text-2xl text-gray-900 font-bold md:text-4xl text-center mb-4 sm:mb-8">Types of Moving Services</h2>
+
+    <div class="px-4 sm:px-20 pt-10 pb-12 grid grid-cols-cards gap-20">
+        <Card url_img={imgLocal} title="Local" description="Moving Jobs in Virginia, Maryland and DC" delay={1000}/>
+
+        <Card url_img={imgLongDistance} title="Long Distance" description="From expert packing and loading to safe and secure transportation, we take care of all the details so you can sit back and relax." delay={1200}/>
+
+        <Card url_img={imgInternalMove} title="Internal Move" description="Whether you're relocating a small office or a large household, our team of experienced movers will handle all the details, from disassembling and reassembling furniture to carefully packing and unpacking your belongings." delay={1400}/>
+    </div>
+</section>

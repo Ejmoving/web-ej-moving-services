@@ -1,0 +1,61 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth overflow-x-hidden">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<meta name="description" content="We are a moving company we are here to make your transition seamless and stress free. We have more than 10 years of experience and a team of professionals." />
+		<meta name="keywords"
+        content="ej moving, ej moving llc, moving, moving virginia, moving maryland, moving dc, local moving, moving experts" />
+    	<meta name="author" content="Deiby Alexander Peña Toro, deiby.penaa@gmail.com, https://github.com/deibypena" />
+    	<meta name="robots" content="all" />
+
+  		<!-- Open Graph / Facebook -->
+  		<meta property="og:type" content="website" />
+  		<meta property="og:url" content="https://ejmovingllc.com/" />
+  		<meta property="og:title" content="EJ Moving Llc" />
+  		<meta property="og:description" content="We are a moving company we are here to make your transition seamless and stress free. We have more than 10 years of experience and a team of professionals." />
+  		<meta property="og:image" content="/icon_open_graph.png" />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://ejmovingllc.com/" />
+		<meta property="twitter:title" content="EJ Moving Llc" />
+		<meta property="twitter:description" content="We are a moving company we are here to make your transition seamless and stress free. We have more than 10 years of experience and a team of professionals." />
+		<meta property="twitter:image" content="/icon_open_graph.png" />
+
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap');
+			body {font-family: 'Montserrat', sans-serif;}
+		</style>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+		<script type="text/javascript">
+			emailjs.init('kwOZn8Bq1tx0lLPxn')
+		</script>
+	</head>
+	<body class="scroll-smooth overflow-x-hidden">
+		<slot />
+
+		<script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script is:inline>
+			AOS.init();
+		</script>
+
+		<script is:inline src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+		<script is:inline src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script type="text/javascript" src="js/email.js"></script>
+		<script type="module" src="js/firebase.js"></script>
+	</body>
+</html>

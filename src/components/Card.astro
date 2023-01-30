@@ -1,0 +1,24 @@
+---
+import Button from './Button.astro';
+
+export interface Props {
+	title: string;
+  description: string;
+  delay: number;
+  url_img: string;
+}
+
+const { title, description, delay, url_img } = Astro.props;
+---
+
+<div class="bg-zinc-100 rounded-lg pb-6 shadow-2xl" data-aos="fade-up" data-aos-duration={delay} data-aos-easing="ease-in">
+    <img class="w-[80%] h-48 max-w-xs rounded-lg -translate-y-2 m-auto sm:-translate-y-6" src={url_img} alt="moving" />
+      
+    <div class="text-center">
+        <h2 class="font-bold text-2xl text-blue-600">{title}</h2>
+        <p class="opcacity-60 mt-2 mb-4 px-6 text-lg">{description}</p>
+        <div class="open_modal">
+          <Button text_btn="Free Quote" />
+        </div>
+    </div>
+</div>
